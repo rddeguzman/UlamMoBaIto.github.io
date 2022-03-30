@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ULAM MO BA ITO?</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Press+Start+2P&display=swap" rel="stylesheet">
+	<style>
+		body {
+		  background-color:#FFDE59;
+		  width:100%;
+		}
+
+		.sidebar {
+		  height: 100%;
+		  width: 0;
+		  position: fixed;
+		  z-index: 1;
+		  top: 0;
+		  left: 0;
+		  background-color: #ffcc00;
+		  overflow-x: hidden;
+		  transition: 0.5s;
+		  padding-top: 60px;
+		}
+
+		.sidebar a {
+		  padding: 8px 8px 8px 32px;
+		  text-decoration: none;
+		  font-size: 20px;
+		  font-family: 'Press Start 2P', cursive;
+		  color: #0033cc;
+		  display: block;
+		  transition: 0.3s;
+		}
+
+		.sidebar a:hover {
+		  color: #e60000;
+		}
+
+		.sidebar .closebtn {
+		  position: absolute;
+		  top: 0;
+		  right: 25px;
+		  font-size: 36px;
+		  margin-left: 50px;
+		}
+
+		.openbtn {
+		  font-size: 20px;
+		  cursor: pointer;
+		  background-color: #FFDE59;
+		  color: white;
+		  padding: 10px 15px;
+		  border: none;
+		}
+
+		.openbtn:hover {
+		  background-color: #FFDE59;
+		}
+
+		#main {
+		  transition: margin-left .5s;
+		  padding: 16px;
+		}
+
+		/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+		@media screen and (max-height: 450px) {
+		  .sidebar {padding-top: 15px;}
+		  .sidebar a {font-size: 18px;}
+		}
+		
+		 h1, h4{
+			font-family: 'Press Start 2P', cursive;
+			color: #0033cc;
+			padding: 5px;
+			text-align: center;
+		}  
+		.letters {
+			width: 60px;
+			height: 60px;
+			
+		}
+		
+		#div1, #div2, #div3, #div4, #div5 {
+			width: 80px;
+			height: 80px;
+			background-color: #e60000;
+			border-style: solid;
+			border-width: 3px;
+			border-color: #e60000;
+			border-radius: 10px;
+			border-spacing: 10px;
+			padding: 7px;
+			float: left;
+			margin: 10px;
+		}
+		
+		.word_letters {
+			margin-top: 120px;
+			margin-left: 270px;
+			margin-right: 270px;
+			margin-bottom: 120px;
+			width: 1200px;
+			
+		}
+		
+		.enter{
+			width: 160px;
+			height: 60px;
+			color:#FFDE59; 
+			background-color:#0033cc;
+			font-family: 'Press Start 2P', serif;
+			font-size: 25px;
+			border-style: solid;
+			border-width: 3px;
+			border-radius: 10px;
+			border-spacing: 10px;
+			border-color: #586F6B;
+			margin-left: 60px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			padding-left: 4.5px;
+			padding-right: 3px;
+			float: left;
+		}
+		
+		.enter:hover {
+			border-color: #e60000;
+			background-color: #e60000;
+			color: #0033cc;
+		}
+		
+		.main {
+			margin-top: 0px;
+			margin-bottom: 30px;
+			margin-right: 35px;
+			margin-left: 35px;
+			background-color: #ffcc00;
+			border-radius: 30px;
+			padding-bottom: 30px;
+		}   
+        </style>
+
+	<script>
+            var userAnswer = "";
+            
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+            
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+            
+            function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+                userAnswer += data; // in this case, the variable data contains the ID of the entered variable
+            }
+
+            function enter() {
+                console.log(userAnswer);
+                if (userAnswer == "LAI1NG") {
+                    if (userAnswer == "LAI1NG") {
+                        alert("SO TAMA! PROCEED TO THE ABOUT PAGE SO YOU CAN MEET US *gasps*.");
+                        location.replace("about.html");
+                    }
+                }
+                
+                else if (userAnswer == "LAI2NG") {
+                    
+                    if (userAnswer == "LAI2NG") {
+                        alert("SO TAMA! PROCEED TO THE ABOUT PAGE SO YOU CAN MEET US *gasps*.");
+                        location.replace("about.html");
+                    }
+                }
+                
+                else {
+                    alert("NOOO MAGUGUTOM KA. TRY AGAIN!");
+                    location.reload();
+                }
+            }	
+	</script>
+</head>
+<body>
+	<div id="mySidebar" class="sidebar">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+	  <a href="index.html">HOME</a>
+	  <a href="mechanics.html">MECHANICS</a>
+	  <a href="play.html">PLAY</a>
+	  <a href="about.html">ABOUT</a>
+	</div>
+	
+
+	<div id="main">
+	  <button class="openbtn" onclick="openNav()"><img src="https://scontent.fmnl6-2.fna.fbcdn.net/v/t1.15752-9/277346124_347908340456345_7433756551980110059_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeE9zYG53g6ebQxVJ4PbeSTEeceAo0BxvCF5x4CjQHG8IYe8hVu_UXsV1-k5u05Bq-1FMZBVnMc6RayuGDrTeVi2&_nc_ohc=pFVI0Va55E4AX8YkQRg&_nc_ht=scontent.fmnl6-2.fna&oh=03_AVLzJTqXNKeWWN3jzQds2OXV9mRH1Iq-LZguD29bifDlkQ&oe=6267A654" alt="Logo" style="width:60px;"></button>
+	</div>
+	
+	<div class="main" style="margin-top: 0px;">
+	<h1> HARD </h1>
+	<div class="picture" style="text-align: center;">
+	<img src="https://scontent.fcrk2-1.fna.fbcdn.net/v/t1.15752-9/275676846_513229717064867_3600591577546327326_n.png?_nc_cat=101&ccb=1-5&_nc_sid=ae9488&_nc_ohc=oGEqCiLV4a4AX-sZ1Q4&_nc_ht=scontent.fcrk2-1.fna&oh=03_AVIFfUDUdIVEM9g97H_lnSy_eeVAa7hgI7ASHkmUYaSW0A&oe=626857E8" alt="laing" style="width:366px; height:405px;">
+	</div>
+
+	<div style="margin-left: 60vh; float: none;">
+						<div id="div1" class="dragdrop_boxes" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        <div id="div2" class="dragdrop_boxes" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        <div id="div3" class="dragdrop_boxes" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        <div id="div4" class="dragdrop_boxes" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        <div id="div5" class="dragdrop_boxes" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        <button class="enter" id="Enter()" onclick="enter()">enter</button>
+                </div>
+	
+	<div class="word_letters">
+                    <img id="G" class="letters" src="https://z-p3-scontent.fmnl3-2.fna.fbcdn.net/v/t1.15752-9/277404693_707748057251190_5181453925020236535_n.png?_nc_cat=109&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeF_z12FRG1GELDDd7EqhZDsnEHhgPUD0-mcQeGA9QPT6Ya6ns6UuKQuTvsJhMGI0xEz9NyuZe8lvRZCSfc0cKhH&_nc_ohc=u5nWYI_LpTEAX9IlZvM&tn=WlqxodH5im4Dyus6&_nc_ht=z-p3-scontent.fmnl3-2.fna&oh=03_AVI_ke56jDQJ11dkQcw0i4rr1-AwEZrXfwebn1TbIQ-GdA&oe=626A09E2" draggable="true" ondragstart="drag(event)" alt="Letter G">    
+                    <img id="D" class="letters" src="https://z-p3-scontent.fmnl3-4.fna.fbcdn.net/v/t1.15752-9/277111919_950051445700543_7830445201005814421_n.png?_nc_cat=104&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeEriaDF4Edho-H9NRbipPjI3hPQ-kgDJG3eE9D6SAMkbaNySIrJX5nLEc2_7uYAYsgKnE16z-NkPQOsTWdJ0hN2&_nc_ohc=j1UOWpSynbcAX-S_3gJ&tn=WlqxodH5im4Dyus6&_nc_ht=z-p3-scontent.fmnl3-4.fna&oh=03_AVJ0ToK-nQ-SMrbd_CyknN_ufLH9GVDPemAadajzwyRiAg&oe=626B68BA" draggable="true" ondragstart="drag(event)" alt="Letter D">
+                    <img id="O" class="letters" src="https://z-p3-scontent.fmnl3-4.fna.fbcdn.net/v/t1.15752-9/277404543_397430585455808_8377890942970963314_n.png?_nc_cat=106&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeGEh8xwuCZoraMZiR2olK0WDJnc8P9Ar_AMmdzw_0Cv8BGOxB7KU9oHN8byFvVeJe0BvR1X5XrfPOMUx5p2aUyO&_nc_ohc=MVN53HbPxNsAX8l675i&tn=WlqxodH5im4Dyus6&_nc_ht=z-p3-scontent.fmnl3-4.fna&oh=03_AVI2EdbcccSLzvOpZM2sf2PcxVrW0fxZI9YG0IBsNO4ZtA&oe=62686BED" draggable="true" ondragstart="drag(event)" alt="Letter O">
+                    <img id="S1" class="letters" src="https://z-p3-scontent.fmnl3-4.fna.fbcdn.net/v/t1.15752-9/275966464_506615644445723_3490065884340395259_n.png?_nc_cat=102&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeFK941kVJNncR1WkloPOAF5tQW8lNfiNKG1BbyU1-I0oY1IeUzX3TlCZmmQrADsVA6-7pfJYnXR9MMRKQ-KuTPi&_nc_ohc=4gMrax-xRAwAX-v4NeZ&_nc_ht=z-p3-scontent.fmnl3-4.fna&oh=03_AVKAp9m6qbfaRPS4WvZhL-9KTBMdP8YNR4whm5kxbYXF_g&oe=626A3E68" draggable="true" ondragstart="drag(event)" alt="Letter S1">
+                    <img id="S2" class="letters" src="https://z-p3-scontent.fmnl3-4.fna.fbcdn.net/v/t1.15752-9/275966464_506615644445723_3490065884340395259_n.png?_nc_cat=102&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeFK941kVJNncR1WkloPOAF5tQW8lNfiNKG1BbyU1-I0oY1IeUzX3TlCZmmQrADsVA6-7pfJYnXR9MMRKQ-KuTPi&_nc_ohc=4gMrax-xRAwAX-v4NeZ&_nc_ht=z-p3-scontent.fmnl3-4.fna&oh=03_AVKAp9m6qbfaRPS4WvZhL-9KTBMdP8YNR4whm5kxbYXF_g&oe=626A3E68" draggable="true" ondragstart="drag(event)" alt="Letter S2">
+                    <img id="I1" class="letters" src="https://z-p3-scontent.fmnl3-1.fna.fbcdn.net/v/t1.15752-9/277469299_551652886142399_4419539078882245734_n.png?_nc_cat=110&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeFVe5OAFhljLrcNP7VHlfkMwsKpjxjNtVvCwqmPGM21W6ItsoeQP7mi7wavppT2ncpY9pK1Q_D_xaxaSgLny7na&_nc_ohc=nlxv14l8tKUAX8jzYZm&tn=WlqxodH5im4Dyus6&_nc_ht=z-p3-scontent.fmnl3-1.fna&oh=03_AVJKFVl9f-F6WF3xe9h0OkdcLOvmyDypn4_HrfJsTr7LXg&oe=626BCC0B" draggable="true" ondragstart="drag(event)" alt="Letter I1">
+					<img id="I2" class="letters" src="https://z-p3-scontent.fmnl3-1.fna.fbcdn.net/v/t1.15752-9/277469299_551652886142399_4419539078882245734_n.png?_nc_cat=110&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeFVe5OAFhljLrcNP7VHlfkMwsKpjxjNtVvCwqmPGM21W6ItsoeQP7mi7wavppT2ncpY9pK1Q_D_xaxaSgLny7na&_nc_ohc=nlxv14l8tKUAX8jzYZm&tn=WlqxodH5im4Dyus6&_nc_ht=z-p3-scontent.fmnl3-1.fna&oh=03_AVJKFVl9f-F6WF3xe9h0OkdcLOvmyDypn4_HrfJsTr7LXg&oe=626BCC0B" draggable="true" ondragstart="drag(event)" alt="Letter I2">
+                    <img id="L" class="letters" src="https://z-p3-scontent.fmnl3-3.fna.fbcdn.net/v/t1.15752-9/277250124_932897590678097_6787421947979785447_n.png?_nc_cat=111&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeHIRU7wy7oHLv_suMXPzI7ij3LbSgzz5cqPcttKDPPlyp6kA70e3PnnGcJ6-dN_HPRtGAkLlNC4yZMZh7KSiyTG&_nc_ohc=CuQ_F3FoL0EAX8P2iA4&_nc_ht=z-p3-scontent.fmnl3-3.fna&oh=03_AVK7lVDB1aHH9yRR2OZTJLZhUim5zT9NXV9clYNZ18wUnw&oe=6269A8B7" draggable="true" ondragstart="drag(event)" alt="Letter L">
+                    <img id="A" class="letters" src="https://z-p3-scontent.fmnl3-1.fna.fbcdn.net/v/t1.15752-9/277316151_269836002015108_673746123944878399_n.png?_nc_cat=108&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeFPjOupBDwq_Z4uvAJjH6jT-0pSBhtbzLr7SlIGG1vMusOxuEGn2DmUCmlF6-jtwHGnhHj3HUS-ptOPFi2umlW8&_nc_ohc=dn2jqkLYJkUAX-TyOAe&_nc_ht=z-p3-scontent.fmnl3-1.fna&oh=03_AVLJ6uPZYzANWMWDCkpWqhv_wQRcQYLFB33AbWxq3tndiA&oe=62695990" draggable="true" ondragstart="drag(event)" alt="Letter A">
+					<img id="N" class="letters" src="https://z-p3-scontent.fmnl3-4.fna.fbcdn.net/v/t1.15752-9/275905226_1163513274462898_7478717737972341769_n.png?_nc_cat=102&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeFGn-U0uVZiPmvGZs1zPPiIXhE1GSindLReETUZKKd0tIaGRkb-1vdGiTyEHTcKy046yVp6I4uFFqGmoy0HWYHa&_nc_ohc=Y8aqLrpzfywAX-6VtJK&_nc_ht=z-p3-scontent.fmnl3-4.fna&oh=03_AVJwdkymnKD8osY8BOWGPeBRrCqa4c_GvwMl62QieJHvxg&oe=626A706D" draggable="true" ondragstart="drag(event)" alt="Letter N">
+                </div>
+		</div>
+	
+	<script>
+	function openNav() {
+	  document.getElementById("mySidebar").style.width = "250px";
+	  document.getElementById("main").style.marginLeft = "250px";
+	}
+
+	function closeNav() {
+	  document.getElementById("mySidebar").style.width = "0";
+	  document.getElementById("main").style.marginLeft= "0";
+	}
+	
+	
+	</script>
+</body>
+</html>

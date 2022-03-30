@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ULAM MO BA ITO?</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Press+Start+2P&display=swap" rel="stylesheet">
+	<style>
+		body {
+		  background-color:#FFDE59;
+		}
+
+		.sidebar {
+		  height: 100%;
+		  width: 0;
+		  position: fixed;
+		  z-index: 1;
+		  top: 0;
+		  left: 0;
+		  background-color: #ffcc00;
+		  overflow-x: hidden;
+		  transition: 0.5s;
+		  padding-top: 60px;
+		}
+
+		.sidebar a {
+		  padding: 8px 8px 8px 32px;
+		  text-decoration: none;
+		  font-size: 20px;
+		  font-family: 'Press Start 2P', cursive;
+		  color: #0033cc;
+		  display: block;
+		  transition: 0.3s;
+		}
+
+		.sidebar a:hover {
+		  color: #e60000;
+		}
+
+		.sidebar .closebtn {
+		  position: absolute;
+		  top: 0;
+		  right: 25px;
+		  font-size: 36px;
+		  margin-left: 50px;
+		}
+
+		.openbtn {
+		  font-size: 20px;
+		  cursor: pointer;
+		  background-color: #FFDE59;
+		  color: white;
+		  padding: 10px 15px;
+		  border: none;
+		}
+
+		.openbtn:hover {
+		  background-color: #FFDE59;
+		}
+
+		#main {
+		  transition: margin-left .5s;
+		  padding: 16px;
+		}
+
+		/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+		@media screen and (max-height: 450px) {
+		  .sidebar {padding-top: 15px;}
+		  .sidebar a {font-size: 18px;}
+		}
+		
+		.col{
+			background-color: #ffcc00;
+			border-radius: 30px;
+			padding-bottom: 30px;
+			margin-top: 0px;
+			margin-bottom: 30px;
+			margin-left: 35px;
+			margin-right: 35px;
+		}
+		
+		h1, h4{
+			font-family: 'Press Start 2P', cursive;
+			color: #0033cc;
+			padding: 5px;
+		}
+		
+		h1{
+			text-align: center;
+		}
+		
+		p{
+			font-family: 'Press Start 2P', cursive;
+			color: #0033cc;
+			padding: 5px;
+			font-size: 20px;
+		}
+		
+		button{
+			padding: 10px;
+			font-family: 'Press Start 2P', cursive;
+		}
+		
+		a:hover{
+			text-decoration: none;
+		}
+		
+		.card-columns{
+			margin: 20px;
+			float: none; 
+			margin-bottom: 10px; 
+		}
+	</style>
+</head>
+<body>
+	<div id="mySidebar" class="sidebar">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+	  <a href="index.html">HOME</a>
+	  <a href="mechanics.html">MECHANICS</a>
+	  <a href="play.html">PLAY</a>
+	  <a href="about.html">ABOUT</a>
+	</div>
+
+
+	<div id="main">
+	  <button class="openbtn" onclick="openNav()"><img src="https://scontent.fmnl6-2.fna.fbcdn.net/v/t1.15752-9/277346124_347908340456345_7433756551980110059_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeE9zYG53g6ebQxVJ4PbeSTEeceAo0BxvCF5x4CjQHG8IYe8hVu_UXsV1-k5u05Bq-1FMZBVnMc6RayuGDrTeVi2&_nc_ohc=pFVI0Va55E4AX8YkQRg&_nc_ht=scontent.fmnl6-2.fna&oh=03_AVLzJTqXNKeWWN3jzQds2OXV9mRH1Iq-LZguD29bifDlkQ&oe=6267A654" alt="Logo" style="width:60px;"></button>
+	</div>
+	
+	<h1>Pick a mode!</h1>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="card-columns">
+	<a href="easy.html">
+	<div class="card bg-light">
+	<div class="card-body text-center">
+	<p class="card-text" style="color:#e60000;">EASY</p>
+	</div>
+	</div>
+	</a>
+	<a href="average.html">
+	<div class="card" style="background-color:#0033cc;">
+	<div class="card-body text-center">
+	<p class="card-text" style="color:white;">AVERAGE</p>
+	</div>
+	</div>
+	</a>
+	<a href="hard.html">
+	<div class="card" style="background-color: #e60000;">
+	<div class="card-body text-center">
+	<p class="card-text" style="color:#FFDE59;">HARD</p>
+	</div>
+	</div>
+	</a>
+	</div>
+	<script>
+	function openNav() {
+	  document.getElementById("mySidebar").style.width = "250px";
+	  document.getElementById("main").style.marginLeft = "250px";
+	}
+
+	function closeNav() {
+	  document.getElementById("mySidebar").style.width = "0";
+	  document.getElementById("main").style.marginLeft= "0";
+	}
+	</script>
+</body>
+</html>

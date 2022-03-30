@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ULAM MO BA ITO?</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Press+Start+2P&display=swap" rel="stylesheet">
+	<style>
+		body {
+		  background-color:#FFDE59;
+		  height: 100%;
+		  width: 100%;
+		  margin-left: auto;
+		  margin-right: auto;
+		  padding: 0;
+		  overflow-x: hidden;
+		}
+		
+		.sidebar {
+		  height: 100%;
+		  width: 0;
+		  position: fixed;
+		  z-index: 1;
+		  top: 0;
+		  left: 0;
+		  background-color: #ffcc00;
+		  overflow-x: hidden;
+		  transition: 0.5s;
+		  padding-top: 60px;
+		}
+
+		.sidebar a {
+		  padding: 8px 8px 8px 32px;
+		  text-decoration: none;
+		  font-size: 20px;
+		  font-family: 'Press Start 2P', cursive;
+		  color: #0033cc;
+		  display: block;
+		  transition: 0.3s;
+		}
+
+		.sidebar a:hover {
+		  color: #e60000;
+		}
+
+		.sidebar .closebtn {
+		  position: absolute;
+		  top: 0;
+		  right: 25px;
+		  font-size: 36px;
+		  margin-left: 50px;
+		}
+
+		.openbtn {
+		  font-size: 20px;
+		  cursor: pointer;
+		  background-color: #FFDE59;
+		  color: white;
+		  padding: 10px 15px;
+		  border: none;
+		}
+
+		.openbtn:hover {
+		  background-color: #FFDE59;
+		}
+
+		#main {
+		  transition: margin-left .5s;
+		  padding: 16px;
+		}
+
+		/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+		@media screen and (max-height: 450px) {
+		  .sidebar {padding-top: 15px;}
+		  .sidebar a {font-size: 18px;}
+		}
+		
+		.col{
+			background-color: #ffcc00;
+			border-radius: 30px;
+			padding-bottom: 30px;
+			margin-top: 0px;
+			margin-bottom: 30px;
+			margin-left: 35px;
+			margin-right: 35px;
+		}
+		
+		h4, h1, h5{
+			font-family: 'Press Start 2P', cursive;
+			color: #0033cc;
+			padding: 5px;
+			text-align: center;
+		}
+		
+		h6, p{
+			font-family: 'Concert One', cursive;
+			color: #0033cc;
+			padding: 5px;
+			font-size: 20px;
+			text-align: center;
+		}
+		
+		button{
+			padding: 10px;
+			font-family: 'Press Start 2P', cursive;
+		}
+		
+		a:hover{
+			text-decoration: none;
+		}
+		
+		code{
+			font-family: 'Concert One', cursive;
+			color: #e60000;
+			padding: 5px;
+			font-size: 20px;
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<div id="mySidebar" class="sidebar">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+	  <a href="index.html">HOME</a>
+	  <a href="mechanics.html">MECHANICS</a>
+	  <a href="play.html">PLAY</a>
+	  <a href="about.html">ABOUT</a>
+	</div>
+
+	<div id="main">
+	  <button class="openbtn" onclick="openNav()"><img src="https://scontent.fmnl6-2.fna.fbcdn.net/v/t1.15752-9/277346124_347908340456345_7433756551980110059_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeE9zYG53g6ebQxVJ4PbeSTEeceAo0BxvCF5x4CjQHG8IYe8hVu_UXsV1-k5u05Bq-1FMZBVnMc6RayuGDrTeVi2&_nc_ohc=pFVI0Va55E4AX8YkQRg&_nc_ht=scontent.fmnl6-2.fna&oh=03_AVLzJTqXNKeWWN3jzQds2OXV9mRH1Iq-LZguD29bifDlkQ&oe=6267A654" alt="Logo" style="width:60px;"></button>
+	</div>
+
+	<div class="row">
+	  <div class="col">
+		<h1>AUTHORS</h1>
+	  <div class="card-columns" style="margin: 10vh 5vh">
+    <div class="card" style="background-color:#e60000">
+      <div class="card-body text-center">
+	  <img src="https://scontent.fmnl25-2.fna.fbcdn.net/v/t1.15752-9/272178028_496087288547643_6949484797281383451_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeH7p7j8r0dthPoqVIOz9zvW4WXrLLrBacrhZessusFpytd0Jun-gqhWG9awCbtpnqzBM3dQwG_zjKU7TvDWB-yx&_nc_ohc=W0sfk8k1YicAX8xe9W2&_nc_ht=scontent.fmnl25-2.fna&oh=03_AVIrXeoUe1sKw27hr5GsRaAPH3CMXhbzSHsWIdCkP7ZrZA&oe=62693EAC" alt="andie" class="mx-auto d-block; img-fluid">
+     <h5 class="card-text; text-white" style="margin-top:15px">Andrea Nichelle Moreno</h5>
+	 <p class="card-text; text-white">amoreno2025@clc.pshs.edu.ph<br>
+	 index page<br>
+	 mechanics page<br>
+	 play modes<br>
+	 cheat sheet<br>
+	 keyboard</p>
+      </div>
+    </div>
+   <div class="card" style="background-color:#e60000">
+      <div class="card-body text-center">
+	  <img src="https://scontent.fmnl25-1.fna.fbcdn.net/v/t1.15752-9/271868852_312286417500414_2361415056907916842_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeHkUrzxX_tf6AClAGPpVxjwJiIQtNLt9scmIhC00u32xz2Rbh4phnY4dXZIfJ-Q6JMCwe8wPhQYQ3kAkYOrXskO&_nc_ohc=DNbAq108q6kAX9iMn4i&_nc_ht=scontent.fmnl25-1.fna&oh=03_AVJhO0e4QQISsuXjVwUY-12QRYSJHA_I9jVcs9ulMq999w&oe=626B9BEC" alt="miah" class="mx-auto d-block; img-fluid">
+     <h5 class="card-text; text-white" style="margin-top:15px">Nehemiah Añasco  <br> &nbsp;</h5>
+	  <p class="card-text; text-white">nanasco2025@clc.pshs.edu.ph<br>
+	  average mode<br>
+	  hard mode
+	  <br>&nbsp;
+	  <br>&nbsp;
+	  <br>&nbsp;</p>
+      </div>
+    </div>
+  <div class="card" style="background-color:#e60000">
+      <div class="card-body text-center">
+	  <img src="https://scontent.fmnl25-2.fna.fbcdn.net/v/t1.15752-9/271901767_928824001332574_535740741915686895_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeGyHtq0jG7Xh7pX1Og4UlHbk2FiRop5PV6TYWJGink9XrG1Cn9PHuub7JXm8YxQZzseayVPgcdOU8Sf-cL6CTeD&_nc_ohc=A62iAYd8QhsAX_QGdZg&_nc_ht=scontent.fmnl25-2.fna&oh=03_AVI0wU2_jVeScYRZ3QRx7Dw-rMFYgrcoK6M3tYer3CTbLg&oe=6269C3A6" alt="rae" class="mx-auto d-block; img-fluid">
+     <h5 class="card-text; text-white" style="margin-top:15px">Rae Derhicneal De Guzman</h5>
+	  <p class="card-text; text-white">rdeguzman2025@clc.pshs.edu.ph<br>
+	  easy mode<br>
+	  about page
+	  <br>&nbsp;
+	  <br>&nbsp;
+	  <br>&nbsp;</p>
+      </div>
+    </div>
+	  </div>
+	  <h1>THE GAME</h1>
+	  <p>
+	  Have you ever wanted to sharpen your mind and tingle your senses with mouth-watering food while discovering more about our own culture and cuisine?
+	  Well this is the game for you and other people ready to take on a challenge of flavors and aroma.
+	  Ulam Mo Ba Ito? is a game that aims to spread and celebrate Filipino Culture and Filipino Cuisine. 
+	  It also test its players about their knowledge on Filipino Food.
+	  You might know the appearance, taste, and smell, but do you know the name? 
+	  Take on the challenge and travel the three different flavorful lands of LuzViMinda. 
+	  We are waiting for you mandirigma ng lasa.
+	  <br>
+	  <br>
+	  </p>
+	  <h1>References</h1>
+	  <p style="text-align: left">
+	  https://www.foxyfolksy.com/wp-content/uploads/2015/05/Sizzling-Sisig-640.jpg?fbclid=IwAR3NdrWpOCmV-TtjJKx7bd6rWCZhEApxiH41a75HE0loPa3zFIlExASY-kY<br>
+	  https://static.rivertenkitchen.com/wp-content/uploads/2018/11/Igado-Recipe_p.jpg?fbclid=IwAR33P2i8Gf3_b6pok9_yjwamZs-_rS5ZGKy6JFirKPLWpa64qeMW2wAYdrk<br>
+	  https://www.kawalingpinoy.com/wp-content/uploads/2013/11/laing-2-1-500x375.jpg<br>
+	  https://panlasangpinoy.com/laing-na-gabi-recipe/?fbclid=IwAR3L76zKRGur-0xz_7Ew6ljjrQm4X6FdE0yq2N2Xs5gbeIzHfUqIjhL6osQ<br>
+	  https://panlasangpinoy.com/pork-sisig/?fbclid=IwAR0sF_Fnxa_csMnyMGgdx1LgL8fpyrnIz8iKe1qGvoObQHhUMkDFxftVPhI<br>
+	  https://panlasangpinoy.com/ilocano-pork-igado-recipe/?fbclid=IwAR3Rw5xuKqhVm2CUSsvCEFaPpR7SfwAsV58r4AHYYJaqKbr-btOSWVR67YQ
+	  </p>
+	  </div>
+	  </div>
+	<script>
+	function openNav() {
+	  document.getElementById("mySidebar").style.width = "250px";
+	  document.getElementById("main").style.marginLeft = "250px";
+	}
+
+	function closeNav() {
+	  document.getElementById("mySidebar").style.width = "0";
+	  document.getElementById("main").style.marginLeft= "0";
+	}
+	</script>
+</body>
+</html>
